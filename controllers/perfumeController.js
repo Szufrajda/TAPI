@@ -1,7 +1,7 @@
 import fs from 'fs';
 
-// Wczytajmy dane z pliku JSON
-let perfumesData = JSON.parse(fs.readFileSync('data/perfumes.json', 'utf-8'));
+// Importujemy dane JSON z asercją
+import perfumesData from '../data/perfumes.json' assert { type: "json" };
 
 // Odwołanie do tablicy perfum
 let perfumes = perfumesData.perfumy;
