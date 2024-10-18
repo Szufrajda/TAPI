@@ -4,17 +4,18 @@ import {
     getPerfumeById,
     createPerfume,
     updatePerfume,
-    replacePerfume,    
+    replacePerfume,
     deletePerfume
-} from '../controllers/perfumeController.js';
+} from '../controllers/perfumeController.js';  // Importujemy kontrolery
 
 const router = express.Router();
 
-router.get('/', getAllPerfumes);          // GET /api/perfumes
-router.get('/:id', getPerfumeById);       // GET /api/perfumes/:id
-router.post('/', createPerfume);          // POST /api/perfumes
-router.patch('/:id', updatePerfume);      // PATCH /api/perfumes/:id
-router.put('/:id', replacePerfume);       // PUT /api/perfumes/:id
-router.delete('/:id', deletePerfume);     // DELETE /api/perfumes/:id
+// Definicje tras dla operacji CRUD
+router.get('/', getAllPerfumes);          // GET /perfumy - pobranie wszystkich perfum
+router.get('/:id', getPerfumeById);       // GET /perfumy/:id - pobranie perfumu po ID
+router.post('/', createPerfume);          // POST /perfumy - dodanie nowego perfumu
+router.patch('/:id', updatePerfume);      // PATCH /perfumy/:id - częściowa aktualizacja perfumu
+router.put('/:id', replacePerfume);       // PUT /perfumy/:id - pełna aktualizacja perfumu
+router.delete('/:id', deletePerfume);     // DELETE /perfumy/:id - usunięcie perfumu
 
 export default router;
