@@ -42,13 +42,35 @@ export const getPerfumeById = (req, res) => {
     }
 };
 
+// Pobranie perfum po nutach zapachowych (typ i grupa)
+export const getPerfumesByScentNoteTypeAndGroup = (req, res) => {
+    const { typ, grupa } = req.params;
+
+    const filteredPerfumes = perfumes.filter(perfume => 
+        perfume.nuty_zapachowe.some(note => 
+            note.typ === typ && 
+            note.składniki.some(skladnik => skladnik.grupa_zapachowa === grupa)
+        )
+    );
+
+    if (filteredPerfumes.length > 0) {
+        const perfumesWithLinks = filteredPerfumes.map(perfume => ({
+            ...perfume,
+            links: generateHATEOASLinks(perfume)
+        }));
+        res.json(perfumesWithLinks);
+    } else {
+        res.status(404).json({ message: `Nie znaleziono perfum z nutami zapachowymi typu ${typ} i grupy ${grupa}` });
+    }
+};
+
 // Dodanie nowych perfum
 export const createPerfume = (req, res) => {
     const newPerfume = req.body;
-    newPerfume.id = perfumes.length + 1;
+    newPerfume.id = perfumes.length + 1;  // Generujemy nowe ID
 
     perfumes.push(newPerfume);
-
+    // Zapisujemy zmiany do pliku JSON
     fs.writeFileSync('data/perfumes.json', JSON.stringify({ perfumy: perfumes }, null, 2));
     const perfumeWithLinks = {
         ...newPerfume,
