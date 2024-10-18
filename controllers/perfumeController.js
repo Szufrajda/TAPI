@@ -6,9 +6,24 @@ let perfumesData = JSON.parse(fs.readFileSync('data/perfumes.json', 'utf-8'));
 // Odwołanie do tablicy perfum
 let perfumes = perfumesData.perfumy;
 
+// Helper do generowania linków HATEOAS
+const generateHATEOASLinks = (perfume) => {
+    const id = perfume.id;
+    return {
+        self: `/perfumy/${id}`,
+        update: `/perfumy/${id}`,
+        delete: `/perfumy/${id}`,
+        allPerfumes: `/perfumy`
+    };
+};
+
 // Pobranie wszystkich perfum
 export const getAllPerfumes = (req, res) => {
-    res.json(perfumes);
+    const perfumesWithLinks = perfumes.map(perfume => ({
+        ...perfume,
+        links: generateHATEOASLinks(perfume)
+    }));
+    res.json(perfumesWithLinks);
 };
 
 // Pobranie perfum po ID
@@ -17,7 +32,11 @@ export const getPerfumeById = (req, res) => {
     const perfume = perfumes.find(p => p.id === id);
 
     if (perfume) {
-        res.json(perfume);
+        const perfumeWithLinks = {
+            ...perfume,
+            links: generateHATEOASLinks(perfume)
+        };
+        res.json(perfumeWithLinks);
     } else {
         res.status(404).json({ message: "Nie znaleziono perfumu" });
     }
@@ -26,12 +45,16 @@ export const getPerfumeById = (req, res) => {
 // Dodanie nowych perfum
 export const createPerfume = (req, res) => {
     const newPerfume = req.body;
-    newPerfume.id = perfumes.length + 1;  // Generujemy nowe ID
+    newPerfume.id = perfumes.length + 1;
 
     perfumes.push(newPerfume);
-    // Zapisujemy zmiany do pliku JSON
+
     fs.writeFileSync('data/perfumes.json', JSON.stringify({ perfumy: perfumes }, null, 2));
-    res.status(201).json(newPerfume);
+    const perfumeWithLinks = {
+        ...newPerfume,
+        links: generateHATEOASLinks(newPerfume)
+    };
+    res.status(201).json(perfumeWithLinks);
 };
 
 // Aktualizacja istniejących perfum (częściowa aktualizacja - PATCH)
@@ -42,7 +65,11 @@ export const updatePerfume = (req, res) => {
     if (perfume) {
         Object.assign(perfume, req.body);
         fs.writeFileSync('data/perfumes.json', JSON.stringify({ perfumy: perfumes }, null, 2));
-        res.json(perfume);
+        const perfumeWithLinks = {
+            ...perfume,
+            links: generateHATEOASLinks(perfume)
+        };
+        res.json(perfumeWithLinks);
     } else {
         res.status(404).json({ message: "Nie znaleziono perfumu" });
     }
@@ -59,7 +86,11 @@ export const replacePerfume = (req, res) => {
 
     perfumes[index] = { id, ...req.body };
     fs.writeFileSync('data/perfumes.json', JSON.stringify({ perfumy: perfumes }, null, 2));  
-    res.json(perfumes[index]);
+    const perfumeWithLinks = {
+        ...perfumes[index],
+        links: generateHATEOASLinks(perfumes[index])
+    };
+    res.json(perfumeWithLinks);
 };
 
 // Usunięcie perfum po ID
