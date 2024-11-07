@@ -1,24 +1,36 @@
 import fs from 'fs';
-
-// Importujemy dane JSON z asercją
 import perfumesData from '../data/perfumes.json' assert { type: "json" };
 
-// Odwołanie do tablicy perfum
 let perfumes = perfumesData.perfumy;
 
-// Helper do generowania linków HATEOAS
 const generateHATEOASLinks = (perfume) => {
     const id = perfume.id;
     return {
-        self: `/perfumy/${id}`,
-        update: `/perfumy/${id}`,
-        delete: `/perfumy/${id}`,
+        self: `/perfumy?id=${id}`,
+        update: `/perfumy?id=${id}`,
+        delete: `/perfumy?id=${id}`,
         allPerfumes: `/perfumy`
     };
 };
 
-// Pobranie wszystkich perfum
 export const getAllPerfumes = (req, res) => {
+    const id = req.query.id ? Number(req.query.id) : null;
+
+    if (id) {
+        // Jeśli parametr `id` jest obecny, znajdź pojedynczy perfum
+        const perfume = perfumes.find(p => p.id === id);
+        if (perfume) {
+            const perfumeWithLinks = {
+                ...perfume,
+                links: generateHATEOASLinks(perfume)
+            };
+            return res.json(perfumeWithLinks);
+        } else {
+            return res.status(404).json({ message: "Nie znaleziono perfumu" });
+        }
+    }
+
+    // Jeśli brak parametru `id`, zwróć wszystkie perfumy
     const perfumesWithLinks = perfumes.map(perfume => ({
         ...perfume,
         links: generateHATEOASLinks(perfume)
@@ -26,9 +38,9 @@ export const getAllPerfumes = (req, res) => {
     res.json(perfumesWithLinks);
 };
 
-// Pobranie perfum po ID
+
 export const getPerfumeById = (req, res) => {
-    const id = Number(req.params.id);
+    const id = Number(req.query.id);
     const perfume = perfumes.find(p => p.id === id);
 
     if (perfume) {
@@ -42,9 +54,9 @@ export const getPerfumeById = (req, res) => {
     }
 };
 
-// Pobranie perfum po nutach zapachowych (typ i grupa)
+
 export const getPerfumesByScentNoteTypeAndGroup = (req, res) => {
-    const { typ, grupa } = req.params;
+    const { typ, grupa } = req.query;
 
     const filteredPerfumes = perfumes.filter(perfume => 
         perfume.nuty_zapachowe.some(note => 
@@ -64,24 +76,26 @@ export const getPerfumesByScentNoteTypeAndGroup = (req, res) => {
     }
 };
 
-// Dodanie nowych perfum
 export const createPerfume = (req, res) => {
-    const newPerfume = req.body;
-    newPerfume.id = perfumes.length + 1;  // Generujemy nowe ID
+    const newPerfume = {
+        id: perfumes.length + 1,
+        ...req.body
+    };
 
     perfumes.push(newPerfume);
-    // Zapisujemy zmiany do pliku JSON
     fs.writeFileSync('data/perfumes.json', JSON.stringify({ perfumy: perfumes }, null, 2));
+
     const perfumeWithLinks = {
         ...newPerfume,
         links: generateHATEOASLinks(newPerfume)
     };
+    
     res.status(201).json(perfumeWithLinks);
 };
 
-// Aktualizacja istniejących perfum (częściowa aktualizacja - PATCH)
+
 export const updatePerfume = (req, res) => {
-    const id = Number(req.params.id);
+    const id = Number(req.query.id);
     const perfume = perfumes.find(p => p.id === id);
 
     if (perfume) {
@@ -97,9 +111,9 @@ export const updatePerfume = (req, res) => {
     }
 };
 
-// Zastąpienie istniejących perfum (pełna aktualizacja - PUT)
+
 export const replacePerfume = (req, res) => {
-    const id = parseInt(req.params.id);
+    const id = parseInt(req.query.id);
     const index = perfumes.findIndex(p => p.id === id);
 
     if (index === -1) {
@@ -115,9 +129,9 @@ export const replacePerfume = (req, res) => {
     res.json(perfumeWithLinks);
 };
 
-// Usunięcie perfum po ID
+
 export const deletePerfume = (req, res) => {
-    const id = Number(req.params.id);
+    const id = Number(req.query.id);
     const index = perfumes.findIndex(p => p.id === id);
 
     if (index !== -1) {

@@ -1,356 +1,15 @@
 {
   "perfumy": [
     {
-      "id": 2,
-      "nazwa": "Jean Paul Gaultier Le Male Le Parfum",
-      "marka": "Jean Paul Gaultier",
-      "nuty_zapachowe": [
-        {
-          "typ": "główne",
-          "składniki": [
-            {
-              "nazwa_składnika": "kardamon",
-              "grupa_zapachowa": "korzenne"
-            }
-          ]
-        },
-        {
-          "typ": "serca",
-          "składniki": [
-            {
-              "nazwa_składnika": "lawenda",
-              "grupa_zapachowa": "ziołowe"
-            }
-          ]
-        },
-        {
-          "typ": "bazy",
-          "składniki": [
-            {
-              "nazwa_składnika": "wanilia",
-              "grupa_zapachowa": "słodkie"
-            }
-          ]
-        }
-      ],
-      "opakowanie": {
-        "pojemność_ml": 125,
-        "cena": "400 PLN"
-      }
-    },
-    {
-      "id": 3,
-      "nazwa": "YSL Y",
+      "id": 1,
+      "nazwa": "YSL MYSLF Parfum",
       "marka": "Yves Saint Laurent",
       "nuty_zapachowe": [
         {
           "typ": "główne",
           "składniki": [
             {
-              "nazwa_składnika": "szałwia",
-              "grupa_zapachowa": "ziołowe"
-            }
-          ]
-        },
-        {
-          "typ": "serca",
-          "składniki": [
-            {
-              "nazwa_składnika": "geranium",
-              "grupa_zapachowa": "kwiatowe"
-            }
-          ]
-        },
-        {
-          "typ": "bazy",
-          "składniki": [
-            {
-              "nazwa_składnika": "cedr",
-              "grupa_zapachowa": "drzewne"
-            }
-          ]
-        }
-      ],
-      "opakowanie": {
-        "pojemność_ml": 60,
-        "cena": "380 PLN"
-      }
-    },
-    {
-      "id": 4,
-      "nazwa": "VALENTINO Born in Roma Intense",
-      "marka": "Valentino",
-      "nuty_zapachowe": [
-        {
-          "typ": "główne",
-          "składniki": [
-            {
-              "nazwa_składnika": "mandarynka",
-              "grupa_zapachowa": "cytrusowe"
-            }
-          ]
-        },
-        {
-          "typ": "serca",
-          "składniki": [
-            {
-              "nazwa_składnika": "lawenda",
-              "grupa_zapachowa": "ziołowe"
-            }
-          ]
-        },
-        {
-          "typ": "bazy",
-          "składniki": [
-            {
-              "nazwa_składnika": "wanilia",
-              "grupa_zapachowa": "słodkie"
-            }
-          ]
-        }
-      ],
-      "opakowanie": {
-        "pojemność_ml": 100,
-        "cena": "500 PLN"
-      }
-    },
-    {
-      "id": 5,
-      "nazwa": "Versace Eros Flame",
-      "marka": "Versace",
-      "nuty_zapachowe": [
-        {
-          "typ": "główne",
-          "składniki": [
-            {
-              "nazwa_składnika": "cytryna",
-              "grupa_zapachowa": "cytrusowe"
-            }
-          ]
-        },
-        {
-          "typ": "serca",
-          "składniki": [
-            {
-              "nazwa_składnika": "pieprz czarny",
-              "grupa_zapachowa": "korzenne"
-            }
-          ]
-        },
-        {
-          "typ": "bazy",
-          "składniki": [
-            {
-              "nazwa_składnika": "drzewo sandałowe",
-              "grupa_zapachowa": "drzewne"
-            }
-          ]
-        }
-      ],
-      "opakowanie": {
-        "pojemność_ml": 100,
-        "cena": "410 PLN"
-      }
-    },
-    {
-      "id": 6,
-      "nazwa": "ARMANI Code",
-      "marka": "Armani",
-      "nuty_zapachowe": [
-        {
-          "typ": "główne",
-          "składniki": [
-            {
-              "nazwa_składnika": "cytryna",
-              "grupa_zapachowa": "cytrusowe"
-            }
-          ]
-        },
-        {
-          "typ": "serca",
-          "składniki": [
-            {
-              "nazwa_składnika": "lawenda",
-              "grupa_zapachowa": "ziołowe"
-            }
-          ]
-        },
-        {
-          "typ": "bazy",
-          "składniki": [
-            {
-              "nazwa_składnika": "drzewo cedrowe",
-              "grupa_zapachowa": "drzewne"
-            }
-          ]
-        }
-      ],
-      "opakowanie": {
-        "pojemność_ml": 100,
-        "cena": "460 PLN"
-      }
-    },
-    {
-      "id": 7,
-      "nazwa": "DIOR Sauvage",
-      "marka": "Dior",
-      "nuty_zapachowe": [
-        {
-          "typ": "główne",
-          "składniki": [
-            {
-              "nazwa_składnika": "bergamotka",
-              "grupa_zapachowa": "cytrusowe"
-            }
-          ]
-        },
-        {
-          "typ": "serca",
-          "składniki": [
-            {
-              "nazwa_składnika": "pieprz czarny",
-              "grupa_zapachowa": "korzenne"
-            }
-          ]
-        },
-        {
-          "typ": "bazy",
-          "składniki": [
-            {
-              "nazwa_składnika": "ambroxan",
-              "grupa_zapachowa": "drzewne"
-            }
-          ]
-        }
-      ],
-      "opakowanie": {
-        "pojemność_ml": 100,
-        "cena": "490 PLN"
-      }
-    },
-    {
-      "id": 8,
-      "nazwa": "Jean Paul Gaultier Le Male Elixir",
-      "marka": "Jean Paul Gaultier",
-      "nuty_zapachowe": [
-        {
-          "typ": "główne",
-          "składniki": [
-            {
-              "nazwa_składnika": "kardamon",
-              "grupa_zapachowa": "korzenne"
-            }
-          ]
-        },
-        {
-          "typ": "serca",
-          "składniki": [
-            {
-              "nazwa_składnika": "lawenda",
-              "grupa_zapachowa": "ziołowe"
-            }
-          ]
-        },
-        {
-          "typ": "bazy",
-          "składniki": [
-            {
-              "nazwa_składnika": "wanilia",
-              "grupa_zapachowa": "słodkie"
-            }
-          ]
-        }
-      ],
-      "opakowanie": {
-        "pojemność_ml": 100,
-        "cena": "400 PLN"
-      }
-    },
-    {
-      "id": 9,
-      "nazwa": "AZZARO The Most Wanted Parfum",
-      "marka": "Azzaro",
-      "nuty_zapachowe": [
-        {
-          "typ": "główne",
-          "składniki": [
-            {
-              "nazwa_składnika": "czerwony pieprz",
-              "grupa_zapachowa": "korzenne"
-            }
-          ]
-        },
-        {
-          "typ": "serca",
-          "składniki": [
-            {
-              "nazwa_składnika": "toffee",
-              "grupa_zapachowa": "słodkie"
-            }
-          ]
-        },
-        {
-          "typ": "bazy",
-          "składniki": [
-            {
-              "nazwa_składnika": "drzewo cedrowe",
-              "grupa_zapachowa": "drzewne"
-            }
-          ]
-        }
-      ],
-      "opakowanie": {
-        "pojemność_ml": 100,
-        "cena": "500 PLN"
-      }
-    },
-    {
-      "id": 10,
-      "nazwa": "Versace Dylan Blue Pour Homme",
-      "marka": "Versace",
-      "nuty_zapachowe": [
-        {
-          "typ": "główne",
-          "składniki": [
-            {
-              "nazwa_składnika": "grejpfrut",
-              "grupa_zapachowa": "cytrusowe"
-            }
-          ]
-        },
-        {
-          "typ": "serca",
-          "składniki": [
-            {
-              "nazwa_składnika": "czarny pieprz",
-              "grupa_zapachowa": "korzenne"
-            }
-          ]
-        },
-        {
-          "typ": "bazy",
-          "składniki": [
-            {
-              "nazwa_składnika": "paczula",
-              "grupa_zapachowa": "ziemiste"
-            }
-          ]
-        }
-      ],
-      "opakowanie": {
-        "pojemność_ml": 100,
-        "cena": "430 PLN"
-      }
-    },
-    {
-      "nazwa": "CHANEL de Blue",
-      "marka": "CHANEL",
-      "nuty_zapachowe": [
-        {
-          "typ": "główne",
-          "składniki": [
-            {
-              "nazwa_składnika": "cytrusy",
+              "nazwa_skladnika": "cytrusy",
               "grupa_zapachowa": "świeże"
             }
           ]
@@ -359,7 +18,7 @@
           "typ": "serca",
           "składniki": [
             {
-              "nazwa_składnika": "mięta",
+              "nazwa_skladnika": "lawenda",
               "grupa_zapachowa": "ziołowe"
             }
           ]
@@ -368,17 +27,434 @@
           "typ": "bazy",
           "składniki": [
             {
-              "nazwa_składnika": "drzewo cedrowe",
+              "nazwa_skladnika": "bursztyn",
               "grupa_zapachowa": "drzewne"
             }
           ]
         }
       ],
       "opakowanie": {
-        "pojemność_ml": 100,
+        "pojemnosc_ml": 100,
+        "cena": "550 PLN"
+      }
+    },
+    {
+      "id": 2,
+      "nazwa": "Dior Sauvage Elixir",
+      "marka": "Dior",
+      "nuty_zapachowe": [
+        {
+          "typ": "główne",
+          "składniki": [
+            {
+              "nazwa_skladnika": "bergamotka",
+              "grupa_zapachowa": "cytrusowe"
+            }
+          ]
+        },
+        {
+          "typ": "serca",
+          "składniki": [
+            {
+              "nazwa_skladnika": "pieprz czarny",
+              "grupa_zapachowa": "korzenne"
+            }
+          ]
+        },
+        {
+          "typ": "bazy",
+          "składniki": [
+            {
+              "nazwa_skladnika": "ambroxan",
+              "grupa_zapachowa": "drzewne"
+            }
+          ]
+        }
+      ],
+      "opakowanie": {
+        "pojemnosc_ml": 60,
+        "cena": "600 PLN"
+      }
+    },
+    {
+      "id": 3,
+      "nazwa": "Jean Paul Gaultier Le Male Le Parfum",
+      "marka": "Jean Paul Gaultier",
+      "nuty_zapachowe": [
+        {
+          "typ": "główne",
+          "składniki": [
+            {
+              "nazwa_skladnika": "kardamon",
+              "grupa_zapachowa": "korzenne"
+            }
+          ]
+        },
+        {
+          "typ": "serca",
+          "składniki": [
+            {
+              "nazwa_skladnika": "lawenda",
+              "grupa_zapachowa": "ziołowe"
+            }
+          ]
+        },
+        {
+          "typ": "bazy",
+          "składniki": [
+            {
+              "nazwa_skladnika": "wanilia",
+              "grupa_zapachowa": "słodkie"
+            }
+          ]
+        }
+      ],
+      "opakowanie": {
+        "pojemnosc_ml": 125,
+        "cena": "400 PLN"
+      }
+    },
+    {
+      "id": 4,
+      "nazwa": "Azzaro The Most Wanted Parfum",
+      "marka": "Azzaro",
+      "nuty_zapachowe": [
+        {
+          "typ": "główne",
+          "składniki": [
+            {
+              "nazwa_skladnika": "czerwony pieprz",
+              "grupa_zapachowa": "korzenne"
+            }
+          ]
+        },
+        {
+          "typ": "serca",
+          "składniki": [
+            {
+              "nazwa_skladnika": "toffee",
+              "grupa_zapachowa": "słodkie"
+            }
+          ]
+        },
+        {
+          "typ": "bazy",
+          "składniki": [
+            {
+              "nazwa_skladnika": "drzewo cedrowe",
+              "grupa_zapachowa": "drzewne"
+            }
+          ]
+        }
+      ],
+      "opakowanie": {
+        "pojemnosc_ml": 100,
+        "cena": "500 PLN"
+      }
+    },
+    {
+      "id": 5,
+      "nazwa": "Versace Dylan Blue",
+      "marka": "Versace",
+      "nuty_zapachowe": [
+        {
+          "typ": "główne",
+          "składniki": [
+            {
+              "nazwa_skladnika": "grejpfrut",
+              "grupa_zapachowa": "cytrusowe"
+            }
+          ]
+        },
+        {
+          "typ": "serca",
+          "składniki": [
+            {
+              "nazwa_skladnika": "czarny pieprz",
+              "grupa_zapachowa": "korzenne"
+            }
+          ]
+        },
+        {
+          "typ": "bazy",
+          "składniki": [
+            {
+              "nazwa_skladnika": "paczula",
+              "grupa_zapachowa": "ziemiste"
+            }
+          ]
+        }
+      ],
+      "opakowanie": {
+        "pojemnosc_ml": 100,
+        "cena": "430 PLN"
+      }
+    },
+    {
+      "id": 6,
+      "nazwa": "Jean Paul Gaultier Le Male Elixir",
+      "marka": "Jean Paul Gaultier",
+      "nuty_zapachowe": [
+        {
+          "typ": "główne",
+          "składniki": [
+            {
+              "nazwa_skladnika": "kardamon",
+              "grupa_zapachowa": "korzenne"
+            }
+          ]
+        },
+        {
+          "typ": "serca",
+          "składniki": [
+            {
+              "nazwa_skladnika": "lawenda",
+              "grupa_zapachowa": "ziołowe"
+            }
+          ]
+        },
+        {
+          "typ": "bazy",
+          "składniki": [
+            {
+              "nazwa_skladnika": "wanilia",
+              "grupa_zapachowa": "słodkie"
+            }
+          ]
+        }
+      ],
+      "opakowanie": {
+        "pojemnosc_ml": 100,
+        "cena": "400 PLN"
+      }
+    },
+    {
+      "id": 7,
+      "nazwa": "Versace Eros Flame",
+      "marka": "Versace",
+      "nuty_zapachowe": [
+        {
+          "typ": "główne",
+          "składniki": [
+            {
+              "nazwa_skladnika": "cytryna",
+              "grupa_zapachowa": "cytrusowe"
+            }
+          ]
+        },
+        {
+          "typ": "serca",
+          "składniki": [
+            {
+              "nazwa_skladnika": "pieprz czarny",
+              "grupa_zapachowa": "korzenne"
+            }
+          ]
+        },
+        {
+          "typ": "bazy",
+          "składniki": [
+            {
+              "nazwa_skladnika": "drzewo sandałowe",
+              "grupa_zapachowa": "drzewne"
+            }
+          ]
+        }
+      ],
+      "opakowanie": {
+        "pojemnosc_ml": 100,
+        "cena": "410 PLN"
+      }
+    },
+    {
+      "id": 8,
+      "nazwa": "Valentino Born in Roma Intense",
+      "marka": "Valentino",
+      "nuty_zapachowe": [
+        {
+          "typ": "główne",
+          "składniki": [
+            {
+              "nazwa_skladnika": "mandarynka",
+              "grupa_zapachowa": "cytrusowe"
+            }
+          ]
+        },
+        {
+          "typ": "serca",
+          "składniki": [
+            {
+              "nazwa_skladnika": "lawenda",
+              "grupa_zapachowa": "ziołowe"
+            }
+          ]
+        },
+        {
+          "typ": "bazy",
+          "składniki": [
+            {
+              "nazwa_skladnika": "wanilia",
+              "grupa_zapachowa": "słodkie"
+            }
+          ]
+        }
+      ],
+      "opakowanie": {
+        "pojemnosc_ml": 100,
+        "cena": "500 PLN"
+      }
+    },
+    {
+      "id": 9,
+      "nazwa": "YSL Y Eau De Parfum",
+      "marka": "Yves Saint Laurent",
+      "nuty_zapachowe": [
+        {
+          "typ": "główne",
+          "składniki": [
+            {
+              "nazwa_skladnika": "szałwia",
+              "grupa_zapachowa": "ziołowe"
+            }
+          ]
+        },
+        {
+          "typ": "serca",
+          "składniki": [
+            {
+              "nazwa_skladnika": "geranium",
+              "grupa_zapachowa": "kwiatowe"
+            }
+          ]
+        },
+        {
+          "typ": "bazy",
+          "składniki": [
+            {
+              "nazwa_skladnika": "cedr",
+              "grupa_zapachowa": "drzewne"
+            }
+          ]
+        }
+      ],
+      "opakowanie": {
+        "pojemnosc_ml": 60,
+        "cena": "380 PLN"
+      }
+    },
+    {
+      "id": 10,
+      "nazwa": "Jean Paul Gaultier Le Male Le Beau Parfum",
+      "marka": "Jean Paul Gaultier",
+      "nuty_zapachowe": [
+        {
+          "typ": "główne",
+          "składniki": [
+            {
+              "nazwa_skladnika": "bergamotka",
+              "grupa_zapachowa": "cytrusowe"
+            }
+          ]
+        },
+        {
+          "typ": "serca",
+          "składniki": [
+            {
+              "nazwa_skladnika": "lawenda",
+              "grupa_zapachowa": "ziołowe"
+            }
+          ]
+        },
+        {
+          "typ": "bazy",
+          "składniki": [
+            {
+              "nazwa_skladnika": "bursztyn",
+              "grupa_zapachowa": "drzewne"
+            }
+          ]
+        }
+      ],
+      "opakowanie": {
+        "pojemnosc_ml": 125,
         "cena": "450 PLN"
-      },
-      "id": 11
+      }
+    },
+    {
+      "id": 11,
+      "nazwa": "Armani Code Parfum",
+      "marka": "Armani",
+      "nuty_zapachowe": [
+        {
+          "typ": "główne",
+          "składniki": [
+            {
+              "nazwa_skladnika": "cytryna",
+              "grupa_zapachowa": "cytrusowe"
+            }
+          ]
+        },
+        {
+          "typ": "serca",
+          "składniki": [
+            {
+              "nazwa_skladnika": "lawenda",
+              "grupa_zapachowa": "ziołowe"
+            }
+          ]
+        },
+        {
+          "typ": "bazy",
+          "składniki": [
+            {
+              "nazwa_skladnika": "drzewo cedrowe",
+              "grupa_zapachowa": "drzewne"
+            }
+          ]
+        }
+      ],
+      "opakowanie": {
+        "pojemnosc_ml": 100,
+        "cena": "460 PLN"
+      }
+    },
+    {
+      "id": 12,
+      "nazwa": "Dior Sauvage Eau De Parfum",
+      "marka": "Dior",
+      "nuty_zapachowe": [
+        {
+          "typ": "główne",
+          "składniki": [
+            {
+              "nazwa_skladnika": "bergamotka",
+              "grupa_zapachowa": "cytrusowe"
+            }
+          ]
+        },
+        {
+          "typ": "serca",
+          "składniki": [
+            {
+              "nazwa_skladnika": "pieprz czarny",
+              "grupa_zapachowa": "korzenne"
+            }
+          ]
+        },
+        {
+          "typ": "bazy",
+          "składniki": [
+            {
+              "nazwa_skladnika": "ambroxan",
+              "grupa_zapachowa": "drzewne"
+            }
+          ]
+        }
+      ],
+      "opakowanie": {
+        "pojemnosc_ml": 100,
+        "cena": "520 PLN"
+      }
     }
   ]
 }
