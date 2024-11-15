@@ -7,32 +7,43 @@ import perfumeRoutes from './routes/perfumeRoutes.js';
 
 const app = express();
 
-// Middleware do obsługi CORS
-app.use(cors());
+const corsOptions = {
+    origin: 'http://localhost:8989',
+    methods: ['GET', 'POST', 'PATCH', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
+    credentials: true
+};
 
-// Middleware do obsługi JSON w ciele zapytań
+app.use(cors(corsOptions));
+
 app.use(express.json());
 
-// Middleware logujący
+app.use((req, res, next) => {
+    if (req.headers['content-type'] && req.headers['content-type'] !== 'application/json') {
+        return res.status(415).json({ message: 'Możesz przesłać jedynie plik typu JSON!' });
+    }
+    next();
+});
+
 app.use((req, res, next) => {
     console.log(`${req.method} ${req.url} - ${new Date().toISOString()}`);
     next();
 });
 
-// Middleware do ustawiania nagłówków HTTP dla każdej odpowiedzi
 app.use((req, res, next) => {
     res.set({
-        'Content-Type': 'application/json',
-        'Allow': 'GET, POST, PATCH, PUT, DELETE',
-        'Cache-Control': 'no-store'
+        'Cache-Control': 'no-store',
+        'X-Powered-By': 'Node.js',
+        'X-Content-Type-Options': 'nosniff',
+        'X-Frame-Options': 'DENY'
     });
+    console.log('Nagłówki ustawione:', res.getHeaders());
     next();
 });
 
-// Trasy REST API
-app.use('/perfumy', perfumeRoutes);
 
-// Konfiguracja serwera GraphQL
+app.use('/api', perfumeRoutes);
+
 const server = new ApolloServer({
     typeDefs,
     resolvers
@@ -41,13 +52,11 @@ const server = new ApolloServer({
 await server.start();
 server.applyMiddleware({ app });
 
-// Middleware do obsługi błędów
 app.use((err, req, res, next) => {
     console.error(err.stack);
-    res.status(500).send('Something broke!');
+    res.status(500).send('Coś poszło nie tak!');
 });
 
-// Uruchamianie serwera
 app.listen(8989, () => {
     console.log('Serwer uruchomiony na porcie 8989');
     console.log(`GraphQL Playground dostępny pod: http://localhost:8989${server.graphqlPath}`);
