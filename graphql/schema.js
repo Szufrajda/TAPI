@@ -46,7 +46,7 @@ export const typeDefs = gql`
     nazwa: String!
     marka: String!
     nuty_zapachowe: [Note!]!
-    pojemnosc: String
+    pojemnosc: Int
     cena: Float!
     typ: String!
   }
