@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "tapi",
   "version": "1.0.0",
   "main": "index.js",
@@ -20,5 +21,31 @@
     "express": "^4.21.1",
     "graphql": "^16.9.0",
     "nodemon": "^3.1.7"
+=======
+  "name": "tapi-perfumy",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@faker-js/faker": "^9.0.3",
+    "@grpc/grpc-js": "^1.12.5",
+    "@grpc/proto-loader": "^0.7.13",
+    "apollo-server": "^3.13.0",
+    "apollo-server-express": "^3.13.0",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "graphql": "^16.10.0",
+    "nodemon": "^3.1.7"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+>>>>>>> df7623a (Poprawa projektu wraz z dodaniem poprawnego graphql)
   }
 }
